@@ -12,11 +12,13 @@ import {
   View
 } from 'react-native';
 
-import osmdb from 'osm-p2p';
+import osmdb from './lib/osm-p2p';
 
 export default class Surveyor extends Component {
-  componentWillMount() {
-    this.osm = osmdb('/tmp/osmdb');
+  constructor() {
+    super();
+
+    this.osm = osmdb('db');
 
     osm.create({
       id: 'A',

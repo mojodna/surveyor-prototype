@@ -8,15 +8,18 @@
     "haul": "haul start"
   },
   "dependencies": {
+    "asyncstorage-down": "^3.1.1",
     "browserify-fs": "^1.0.0",
     "buffer": "^5.0.6",
     "crypto-browserify": "^3.11.0",
     "events": "^1.1.1",
+    "hyperlog": "^4.12.1",
     "node-libs-browser": "^2.0.0",
-    "osm-p2p": "^1.4.0",
+    "osm-p2p-db": "^3.11.0",
     "path-browserify": "^0.0.0",
     "react": "16.0.0-alpha.6",
     "react-native": "0.43.4",
+    "react-native-level": "^3.0.0",
     "stream-browserify": "^2.0.1",
     "util": "^0.10.3"
   },

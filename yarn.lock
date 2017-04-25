@@ -14,6 +14,12 @@ absolute-path@^0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/absolute-path/-/absolute-path-0.0.0.tgz#a78762fbdadfb5297be99b15d35a785b2f095bf7"
 
+abstract-leveldown@0.12.3:
+  version "0.12.3"
+  resolved "https://registry.yarnpkg.com/abstract-leveldown/-/abstract-leveldown-0.12.3.tgz#116b1ec5c7710ef7a2d5706768bbdb4440be1070"
+  dependencies:
+    xtend "~3.0.0"
+
 abstract-leveldown@^2.4.1, abstract-leveldown@~2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/abstract-leveldown/-/abstract-leveldown-2.6.1.tgz#f9014a5669b746418e145168dea49a044ae15900"
@@ -165,6 +171,10 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
+argsarray@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/argsarray/-/argsarray-0.0.1.tgz#6e7207b4ecdb39b0af88303fa5ae22bda8df61cb"
+
 arr-diff@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/arr-diff/-/arr-diff-2.0.0.tgz#8f3b827f955a8bd669697e4a4256ac3ceae356cf"
@@ -276,6 +286,15 @@ async@^2.0.1, async@^2.1.2, async@^2.1.4:
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
+
+asyncstorage-down@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/asyncstorage-down/-/asyncstorage-down-3.1.1.tgz#68b0416b9d361afe9b2a292963ab474eb6813518"
+  dependencies:
+    abstract-leveldown "0.12.3"
+    argsarray "0.0.1"
+    d64 "^1.0.0"
+    tiny-queue "0.2.0"
 
 aws-sign2@~0.6.0:
   version "0.6.0"
@@ -1763,6 +1782,10 @@ cuid@^1.2.5:
     core-js "^1.1.1"
     node-fingerprint "0.0.2"
 
+d64@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/d64/-/d64-1.0.0.tgz#4002a87e850cbfc9f9d9706b60fca613a3336e90"
+
 d@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/d/-/d-1.0.0.tgz#754bb5bfe55451da69a58b94d45f4c5b0462d58f"
@@ -1829,23 +1852,17 @@ default-require-extensions@^1.0.0:
   dependencies:
     strip-bom "^2.0.0"
 
-deferred-chunk-store@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/deferred-chunk-store/-/deferred-chunk-store-1.0.1.tgz#ae37aa32a4a1d6d8a301f1eec9b93778e16c6b33"
-  dependencies:
-    inherits "^2.0.1"
-
-deferred-leveldown@^1.2.1, deferred-leveldown@~1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/deferred-leveldown/-/deferred-leveldown-1.2.1.tgz#5d25c3310f5fe909946f6240dc9f90dd109a71ef"
-  dependencies:
-    abstract-leveldown "~2.4.0"
-
 deferred-leveldown@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/deferred-leveldown/-/deferred-leveldown-0.2.0.tgz#2cef1f111e1c57870d8bbb8af2650e587cd2f5b4"
   dependencies:
     abstract-leveldown "~0.12.1"
+
+deferred-leveldown@~1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/deferred-leveldown/-/deferred-leveldown-1.2.1.tgz#5d25c3310f5fe909946f6240dc9f90dd109a71ef"
+  dependencies:
+    abstract-leveldown "~2.4.0"
 
 define-properties@^1.1.2:
   version "1.1.2"
@@ -3025,7 +3042,7 @@ hyperlog-kdb-index@^4.0.0:
     subleveldown "^2.1.0"
     through2 "^2.0.0"
 
-hyperlog@^4.10.0:
+hyperlog@^4.12.1:
   version "4.12.1"
   resolved "https://registry.yarnpkg.com/hyperlog/-/hyperlog-4.12.1.tgz#6c7cdc2626f73441f2d93b9d6f45838fd17d9b5d"
   dependencies:
@@ -3061,12 +3078,6 @@ iconv-lite@0.4.13:
 iconv-lite@0.4.15, iconv-lite@~0.4.13:
   version "0.4.15"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.15.tgz#fe265a218ac6a57cfe854927e9d04c19825eddeb"
-
-idb-chunk-store@~0.1.0:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/idb-chunk-store/-/idb-chunk-store-0.1.3.tgz#4a7e140a8f8613f2e6c31cfd7e631e72486b1aa5"
-  dependencies:
-    inherits "^2.0.1"
 
 idb-wrapper@^1.5.0:
   version "1.7.1"
@@ -3791,14 +3802,6 @@ level-blobs@^0.1.7:
     once "^1.3.0"
     readable-stream "^1.0.26-4"
 
-level-browserify@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/level-browserify/-/level-browserify-1.1.0.tgz#cd87d1a9cea53f75103efefb88ceba99895275a1"
-  dependencies:
-    level-js "^2.1.6"
-    level-packager "~1.2.0"
-    leveldown "^1.4.1"
-
 level-codec@~6.1.0:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/level-codec/-/level-codec-6.1.0.tgz#f5df0a99582f76dac43855151ab6f4e4d0d60045"
@@ -3854,7 +3857,7 @@ level-iterator-stream@~1.3.0:
     readable-stream "^1.0.33"
     xtend "^4.0.0"
 
-level-js@^2.1.3, level-js@^2.1.6:
+level-js@^2.1.3:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/level-js/-/level-js-2.2.4.tgz#bc055f4180635d4489b561c9486fa370e8c11697"
   dependencies:
@@ -3888,6 +3891,12 @@ level-option-wrap@^1.1.0:
   resolved "https://registry.yarnpkg.com/level-option-wrap/-/level-option-wrap-1.1.0.tgz#ad20e68d9f3c22c8897531cc6aa7af596b1ed129"
   dependencies:
     defined "~0.0.0"
+
+level-packager@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/level-packager/-/level-packager-0.18.0.tgz#c076b087646f1d7dedcc3442f58800dd0a0b45f5"
+  dependencies:
+    levelup "~0.18.0"
 
 level-packager@~1.2.0:
   version "1.2.1"
@@ -3935,7 +3944,7 @@ level@^1.4.0:
     level-packager "~1.2.0"
     leveldown "~1.6.0"
 
-leveldown@^1.4.1, leveldown@^1.4.4, leveldown@~1.6.0:
+leveldown@~1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/leveldown/-/leveldown-1.6.0.tgz#e6ec906d2995a8bffd02499f39e95988cd2b230f"
   dependencies:
@@ -3945,7 +3954,7 @@ leveldown@^1.4.1, leveldown@^1.4.4, leveldown@~1.6.0:
     nan "~2.5.1"
     prebuild-install "^2.1.0"
 
-levelup@^0.18.2:
+levelup@^0.18.2, levelup@~0.18.0:
   version "0.18.6"
   resolved "https://registry.yarnpkg.com/levelup/-/levelup-0.18.6.tgz#e6a01cb089616c8ecc0291c2a9bd3f0c44e3e5eb"
   dependencies:
@@ -3957,7 +3966,7 @@ levelup@^0.18.2:
     semver "~2.3.1"
     xtend "~3.0.0"
 
-levelup@^1.2.1, levelup@^1.3.1, levelup@~1.3.0:
+levelup@^1.2.1, levelup@~1.3.0:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/levelup/-/levelup-1.3.5.tgz#fa80a972b74011f2537c8b65678bd8b5188e4e66"
   dependencies:
@@ -4668,7 +4677,7 @@ osenv@^0.1.4:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
-osm-p2p-db@^3.9.0:
+osm-p2p-db@^3.11.0:
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/osm-p2p-db/-/osm-p2p-db-3.11.0.tgz#39a55f7294c924bb216a5595daf7ab1c7d210e4c"
   dependencies:
@@ -4688,22 +4697,6 @@ osm-p2p-db@^3.9.0:
     through2 "^2.0.0"
     to2 "^1.0.0"
     xtend "^4.0.1"
-
-osm-p2p@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/osm-p2p/-/osm-p2p-1.4.0.tgz#b88172baeee66d71392b6ec2da3cd5897e925a34"
-  dependencies:
-    deferred-chunk-store "^1.0.1"
-    deferred-leveldown "^1.2.1"
-    fd-chunk-store "^2.0.0"
-    hyperlog "^4.10.0"
-    idb-chunk-store "~0.1.0"
-    level-browserify "^1.1.0"
-    leveldown "^1.4.4"
-    levelup "^1.3.1"
-    mkdirp "^0.5.1"
-    once "^1.3.3"
-    osm-p2p-db "^3.9.0"
 
 p-limit@^1.1.0:
   version "1.1.0"
@@ -5127,6 +5120,12 @@ react-devtools-core@^2.0.8:
     cross-env "^3.1.4"
     ws "^2.0.3"
 
+react-native-level@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-level/-/react-native-level-3.0.0.tgz#d917500170ad095f255d662ee8ded1bfa95fd261"
+  dependencies:
+    level-packager "^0.18.0"
+
 react-native@0.43.4:
   version "0.43.4"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.43.4.tgz#92fb6937ab415b2e5612835a93a61845de98eb4d"
@@ -5266,9 +5265,18 @@ read-pkg@^1.0.0:
     normalize-package-data "^2.3.2"
     path-type "^1.0.0"
 
-"readable-stream@>=1.0.33-1 <1.1.0-0", readable-stream@^1.0.26-4, readable-stream@^1.0.33, readable-stream@~1.0.17, readable-stream@~1.0.26, readable-stream@~1.0.26-4, readable-stream@~1.0.27-1:
+"readable-stream@>=1.0.33-1 <1.1.0-0", readable-stream@^1.0.26-4, readable-stream@~1.0.17, readable-stream@~1.0.26, readable-stream@~1.0.26-4, readable-stream@~1.0.27-1:
   version "1.0.34"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.0.34.tgz#125820e34bc842d2f2aaafafe4c2916ee32c157c"
+  dependencies:
+    core-util-is "~1.0.0"
+    inherits "~2.0.1"
+    isarray "0.0.1"
+    string_decoder "~0.10.x"
+
+readable-stream@^1.0.33, readable-stream@~1.1.10, readable-stream@~1.1.8, readable-stream@~1.1.9:
+  version "1.1.14"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
   dependencies:
     core-util-is "~1.0.0"
     inherits "~2.0.1"
@@ -5286,15 +5294,6 @@ readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable
     process-nextick-args "~1.0.6"
     string_decoder "~1.0.0"
     util-deprecate "~1.0.1"
-
-readable-stream@~1.1.10, readable-stream@~1.1.8, readable-stream@~1.1.9:
-  version "1.1.14"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-1.1.14.tgz#7cf4c54ef648e3813084c636dd2079e166c081d9"
-  dependencies:
-    core-util-is "~1.0.0"
-    inherits "~2.0.1"
-    isarray "0.0.1"
-    string_decoder "~0.10.x"
 
 readdirp@^2.0.0:
   version "2.1.0"
@@ -6089,6 +6088,10 @@ timers-browserify@^2.0.2:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.2.tgz#ab4883cf597dcd50af211349a00fbca56ac86b86"
   dependencies:
     setimmediate "^1.0.4"
+
+tiny-queue@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/tiny-queue/-/tiny-queue-0.2.0.tgz#c49fcb5c87555be1b4a5df7eb87101d5b78bc9dc"
 
 tmp@^0.0.31:
   version "0.0.31"
