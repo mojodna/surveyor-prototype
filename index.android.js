@@ -18,19 +18,21 @@ export default class Surveyor extends Component {
   constructor() {
     super();
 
-    this.osm = osmdb('db');
+    this.osm = osmdb();
 
-    osm.create({
+    this.osm.create({
       id: 'A',
       lat: 64.5,
       lon: -147.6
     }, (err, key, node) => console.log(err, key, node));
-    osm.create({
+
+    this.osm.create({
       id: 'B',
       lat: 64.5,
       lon: -147.6
     }, (err, key, node) => console.log(err, key, node));
-    osm.create({
+
+    this.osm.create({
       id: 'C',
       lat: 64.5,
       lon: -147.6
@@ -38,7 +40,7 @@ export default class Surveyor extends Component {
   }
 
   render() {
-    osm.query([
+    this.osm.query([
       [61, 65],
       [-149, -147]
     ], (err, pts) => console.log(err, pts));
